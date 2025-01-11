@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/styles_R_M.css">
+    <title>Registro de Medicos</title>
+</head>
+<body>
+
+    <!-- seccion fondo de animacion -->
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+   
+        <form class="context" id="Registro-Medicos-Form">
+
+            <h3>Registro de Medico</h3>
+            <br>
+            <br>
+        <section>                
+            <label for="Nombres">Nombres</label>
+            <input type="text" id="Nombres" name="Nombres" required>
+            <br>
+            <br>
+            <label for="Apellidos">Apellidos</label>
+            <input type="text" id="Apellidos" name="Apellidos" required>
+            <br>
+            <br>
+            <label for="Tipo de Documento">Tipo de Documento</label>
+            <select type="option" name="Tipo de Documento" id="TipoDocumento" required>
+                <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
+                <option value="Cedula Extranjera">Cedula Extranjera</option>
+                <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                <option value="Contraseña">Contraseña</option>
+            </select>
+            <br>
+            <br>
+            <label for="Numero de Documento">Numero de Documento</label>
+            <input type="number" name="Numero de Documento" id="NumeroDocumento" required>
+            <br>
+            <br>
+            <label for="Numero de Consultorio">Numero de Consultorio</label>
+            <input type="number" id="Consultorio" name="Consultorio" required>
+            <br>
+            <br>
+            <label for="Celular">Celular</label>
+            <input type="tel" name="Celular" id="Celular" required>
+            <br>
+            <br>
+            <label for="Correo">Correo</label>
+            <input type="email" id="Correo" name="Correo" required>
+            <br>
+            <br>
+            <label for="Especialidad">Especialidad</label>
+            <select name="Especialidad" id="Especialidad"  required>
+                <option value="">Seleccione una Especialidad Requerida</option>
+                <option value="Odontologo">Odontologo</option>
+                <option value="Dermatologo">Dermatologo</option>
+                <option value="Cardiologia">Cardiologia</option>
+                <option value="Ginecologia">Ginecologia</option>
+                <option value="Oftamologia">Oftamologia</option>
+                <option value="Psicologia">Psicologia</option>
+                <option value="Nutricionista">Nutricionista</option>
+                <option value="Urologo">Urologo</option>
+                <option value="Psiquiatra">Psiquiatra</option>
+                <option value="Neurologo">Neurologo</option>
+                <option value="Pediatra">Pediatra</option>
+                <option value="Cirujano">Cirujano</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Guardar" id="Guardar">
+            <a href="index.html">Regresar</a>
+        </section>
+        </form>
+</body>
+</html>
