@@ -7,6 +7,19 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'hola' });
 });
 
+//enrutamiento para visualizar los medicos de la BD
+router.get('/listado-medicos',(req,res)=>{
+  conexion.query(`SELECT * FROM medicos;`,(error,resultado)=>{
+  if(error){
+    console.log('ocurrio un error en la ejecucion', error)
+    res.status(500).send('error en la ejecucion')
+  }else{
+  
+    res.status(200).render('medicos',{resultado})
+  }
+  })
+})
+
 //enrutamiento para agregar un medico a la BD desde nuestra aplicacion
 router.post('/agregar-medico',(req,res)=>{
   const Cedula=req.body.Cedula
@@ -18,17 +31,16 @@ router.post('/agregar-medico',(req,res)=>{
   const Correo=req.body.Correo
   const Especialidad=req.body.Especialidad
 
-  console.log(Especialidad)
   conexion.query(`INSERT INTO medicos (Nombres,Apellidos,TipoDocumento,Cedula,Consultorio,Celular,Correo,Especialidad) VALUES ('${Nombres}','${Apellidos}','${TipoDocumento}',${Cedula},'${Consultorio}','${Celular}','${Correo}','${Especialidad}')`,(error,resultado)=>{
     if(error){
       console.log('ocurrio un error en la ejecucion', error)
       res.status(500).send('error en la ejecucion')
     }
     else{
-     res.status(200).send('datos insertados con exito')
+      res.status(200).redirect('/listado-medicos')
     }
   })
-
-  res.status(200).send('agregando medico')
 })
+
+
 module.exports = router;

@@ -1,0 +1,48 @@
+
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+
+        <div class="context">
+            <h1>Tabla de Registros Especialistas Medicos</h1>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Tipo de Documento</th>
+                        <th>Numero de Documento</th>
+                        <th>Numero de Consultorio</th>
+                        <th>Celular</th>
+                        <th>Correo</th>
+                        <th>Especialidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each resultado}}
+                    <tr>
+                        <td>{{Nombres}}</td>
+                        <td>{{Apellidos}}</td>
+                        <td>{{TipoDocumento}}</td>
+                        <td>{{Cedula}}</td>
+                        <td>{{Consultorio}}</td>
+                        <td>{{Celular}}</td>
+                        <td>{{Correo}}</td>
+                        <td>{{Especialidad}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>                                                                           
+            <a href="/index.html">Volver</a>
+        </div>
+    </div >
