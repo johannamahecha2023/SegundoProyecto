@@ -1,0 +1,47 @@
+
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+        <div class="context">
+            <h1>Tabla de registros de Pacientes</h1>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Tipo de Documento</th>
+                        <th>Numero de Documento</th>
+                        <th>Edad</th>
+                        <th>Celular</th>
+                        <th>Especialidad</th>
+                        <th>Medico</th>
+                    </tr>
+                </thead>
+                      {{#each resultado}}
+                 <tbody>
+                    <tr>
+                        <td>Claudia Patricia</td>
+                        <td>Ospina Garcia</td>
+                        <td>Cedula de Ciudadania</td>
+                        <td>51233854</td>
+                        <td>54</td>
+                        <td>302345643</td>
+                        <td>Drematologia</td>
+                        <td>Leidy Mahecha</td>
+                    </tr>
+                     {{/each}}
+                 </tbody>
+            </table>
+            <a href="./index.html">Volver</a>
+       </div>
+    </div>
