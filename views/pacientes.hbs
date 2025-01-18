@@ -21,23 +21,19 @@
                         <th>Apellidos</th>
                         <th>Tipo de Documento</th>
                         <th>Numero de Documento</th>
-                        <th>Edad</th>
+                        <th>Fecha de Nacimiento</th>
                         <th>Celular</th>
-                        <th>Especialidad</th>
-                        <th>Medico</th>
                     </tr>
                 </thead>
-                      {{#each resultado}}
                  <tbody>
+                     {{#each resultado}}
                     <tr>
-                        <td>Claudia Patricia</td>
-                        <td>Ospina Garcia</td>
-                        <td>Cedula de Ciudadania</td>
-                        <td>51233854</td>
-                        <td>54</td>
-                        <td>302345643</td>
-                        <td>Drematologia</td>
-                        <td>Leidy Mahecha</td>
+                        <td>{{Nombres}}</td>
+                        <td>{{Apellidos}}</td>
+                        <td>{{TipoDocumento}}</td>
+                        <td>{{Cedula}}</td>
+                        <td>{{Fecha_Nacimiento}}</td>
+                        <td>{{Celular}}</td>
                     </tr>
                      {{/each}}
                  </tbody>
