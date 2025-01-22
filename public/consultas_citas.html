@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/styles_R_M.css">
+    <title>Consulta de Especialidades</title>
+</head>
+<body>
+
+    <!-- seccion fondo de animacion -->
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+   
+        <form class="context" id="Registro-Medicos-Form" method="post" action="/consulta-cita">
+            <h3>Consultas Citas</h3>
+            <label for="Especialidad">Especialidad</label>
+            <select name="Especialidad" id="Especialidad"  required>
+                <option value="">Seleccione una Especialidad Requerida</option>
+                <option value="Odontologo">Odontologo</option>
+                <option value="Dermatologo">Dermatologo</option>
+                <option value="Cardiologia">Cardiologia</option>
+                <option value="Ginecologia">Ginecologia</option>
+                <option value="Oftamologia">Oftamologia</option>
+                <option value="Psicologia">Psicologia</option>
+                <option value="Nutricionista">Nutricionista</option>
+                <option value="Urologo">Urologo</option>
+                <option value="Psiquiatra">Psiquiatra</option>
+                <option value="Neurologo">Neurologo</option>
+                <option value="Pediatra">Pediatra</option>
+                <option value="Cirujano">Cirujano</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Consultar" id="Consultar">
+            <a href="index.html">Regresar</a>
+        </form>
+</body>
+</html>

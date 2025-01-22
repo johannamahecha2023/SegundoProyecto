@@ -1,0 +1,51 @@
+ 
+    <!-- seccion fondo de animacion -->
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+        <form class="context" id="Registro-Pacientes-Form" method="post" action="/agregar-paciente">
+
+            <h3>Agendamiento de citas</h3>
+            <br>
+            <br>
+            <section>                
+            <label for="NumeroCedula">Numero de Cedula</label>
+            <input type="number" name="NumeroCedula" id="NumeroCedula" required>
+            <br>
+            <br>
+            <label for="FechaCita">Fecha de Cita Medica</label>
+            <input type="text" name="FechaCita" id="FechaCita" required/>
+            <br>
+            <br>
+            <label for="medico">Especialista</label>
+            <select name="medico" id="medico"  required>
+                <option value="">Seleccione una Especialidad Requerida</option>
+                {{#each resultado}}
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+            {{/each}}
+            </select>
+            <input type="submit" value="Guardar" id="Guardar">
+            <a href="index.html">Regresar</a>
+            </section>
+        </form>

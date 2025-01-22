@@ -76,4 +76,17 @@ router.post('/agregar-paciente',(req,res)=>{
   })
 })
 
+//enrutamiento de consulta citas
+router.post('/consulta-cita', (req,res)=>{
+  const Especialidad =req.body.Especialidad
+  conexion.query(`select * from medicos where Especialidad = '${Especialidad}';`,(error, resultado)=>{
+    if(error){
+      console.log(error)
+      res.status(500).send('ocurrio un error en la consulta')
+    }else{
+      res.status(200).render('agendar_citas', {resultado})
+    }
+  })
+})
+
 module.exports = router;
