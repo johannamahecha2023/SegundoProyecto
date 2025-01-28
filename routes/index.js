@@ -76,7 +76,7 @@ router.post('/agregar-paciente',(req,res)=>{
   })
 })
 
-//enrutamiento de consulta citas
+//enrutamiento para consultar los medicos de una especialidad y poder agendar la cita
 router.post('/consulta-cita', (req,res)=>{
   const Especialidad =req.body.Especialidad
   conexion.query(`select * from medicos where Especialidad = '${Especialidad}';`,(error, resultado)=>{
@@ -84,9 +84,25 @@ router.post('/consulta-cita', (req,res)=>{
       console.log(error)
       res.status(500).send('ocurrio un error en la consulta')
     }else{
-      res.status(200).render('agendar_citas', {resultado})
+      res.status(200).render('agendar-citas', {resultado})
     }
   })
+})
+
+//Enrutamiento para guardar una cita en la base de datos
+router.post('/agregar-cita',(req,res)=> {
+  
+   const cedula_paciente =req.body.Cedula
+   const fecha_cita =req.body.fecha_cita
+   const cedula_medico =req.body.medico
+   conexion.query(`INSERT INTO cita_medica (cedula_medico,cedula_paciente,fecha_cita) VALUES (${cedula_medico},${cedula_paciente},'${fecha_cita}')`, (error,resultado)=>{
+     if(error){
+      console.log(error)
+      res.status(500).send('ocurrio un error en la consulta')
+     }else{
+      res.status(200).send('cita agendada con exito')
+     }
+   })
 })
 
 module.exports = router;

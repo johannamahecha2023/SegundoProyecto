@@ -1,0 +1,42 @@
+    <!-- seccion fondo de animacion -->
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+        <div>
+           <form  method="post" action="/agregar-cita">
+
+            <h3>Agendamiento de Citas</h3>
+        
+            <label for="Cedula">Numero de Documento</label>
+            <input type="number" id="Cedula" name="Cedula">
+            <br>
+            <br>
+            <label for="fecha_cita">Fecha de cita medica</label>
+            <input type="date" name="fecha_cita" id="fecha_cita" required>
+            <br>
+            <br>
+            <label for="medico">Medico Especialista</label>
+            <select name="medico" id="medico"  required>
+                <option value="">Seleccione una Especialidad Requerida</option>
+                {{#each resultado}}
+                <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
+                {{/each}}
+            </select>
+
+            <input type="submit" value="Enviar" id="Enviar">
+    </form>
+    <a href="../index.html">Regresar</a>
+
+</div>
+        
+</div>
