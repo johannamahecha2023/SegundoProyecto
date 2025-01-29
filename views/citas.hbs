@@ -1,0 +1,45 @@
+
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+
+        <div class="context">
+            <h1>Listado Cita</h1>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Fecha Cita</th>
+                        <th>Paciente</th>
+                        <th>Celular</th>
+                        <th>Especialidad</th>
+                        <th>Consultorio</th>
+                        <th>Medico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each resultado}}
+                    <tr>
+                        <td>{{formatoFecha  fecha_cita}}</td>
+                        <td>{{nombresPaciente}} {{apellidosPaciente}}</td>
+                        <td>{{Celular}}</td>
+                        <td>{{Especialidad}}</td>
+                        <td>{{Consultorio}}</td>
+                        <td>{{Nombres}} {{Apellidos}}</td>
+                        
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>                                                                           
+            <a href="../index.html">Volver</a>
+        </div>
+    </div >

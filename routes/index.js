@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'hola' });
 });
 
-//enrutamiento para visualizar los medicos de la BD
+//enrutamiento para visualizar los pacientes de la BD
 router.get('/listado-pacientes',(req,res)=>{
   conexion.query(`SELECT * FROM pacientes;`,(error,resultado)=>{
   if(error){
@@ -21,6 +21,7 @@ router.get('/listado-pacientes',(req,res)=>{
 })
 
 
+
 //enrutamiento para visualizar los medicos de la BD
 router.get('/listado-medicos',(req,res)=>{
   conexion.query(`SELECT * FROM medicos;`,(error,resultado)=>{
@@ -31,6 +32,17 @@ router.get('/listado-medicos',(req,res)=>{
   
     res.status(200).render('medicos',{resultado})
   }
+  })
+})
+
+//enrutamiento para listar las citas agendadas
+router.get('/listado-citas',(req,res) => {
+  conexion.query('select fecha_cita, pacientes.Nombres nombresPaciente, pacientes.Apellidos apellidosPaciente, pacientes.Celular, medicos.Especialidad,medicos.Consultorio, medicos.Nombres, medicos.Apellidos from cita_medica,pacientes,medicos where cedula_medico=medicos.Cedula and cedula_paciente=pacientes.Cedula ;',(error,resultado)=>{
+    if(error){
+       res.status(500).send('ocurrio un error en la ejecucion')
+    }else{
+      res.status(200).render('citas',{resultado})
+    }
   })
 })
 
