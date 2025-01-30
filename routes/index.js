@@ -112,7 +112,7 @@ router.post('/agregar-cita',(req,res)=> {
       console.log(error)
       res.status(500).send('ocurrio un error en la consulta')
      }else{
-      res.status(200).send('cita agendada con exito')
+      res.status(200).redirect('/listado-citas')
      }
    })
 })

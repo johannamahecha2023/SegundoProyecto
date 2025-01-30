@@ -1,4 +1,4 @@
-<!--<div class="area">
+<div class="area">
     <ul class="circles">
         <li></li>
         <li></li>
@@ -10,28 +10,28 @@
         <li></li>
         <li></li>
         <li></li>
-    </ul>-->
+    </ul>
 
     <div class="form-container">
         <form class="context" method="post" action="/agregar-cita">
             <h3>Agendamiento de Citas</h3>
 
-            <label for="Cedula">Numero de Documento</label>
+            <label for="Cedula">Número de Documento</label>
             <input type="number" id="Cedula" name="Cedula" required>
-            <br><br>
+            <br>
 
-            <label for="fecha_cita">Fecha de cita medica</label>
+            <label for="fecha_cita">Fecha de cita médica</label>
             <input type="date" name="fecha_cita" id="fecha_cita" required>
-            <br><br>
+            <br>
 
-            <label for="medico">Medico Especialista</label>
+            <label for="medico">Médico Especialista</label>
             <select name="medico" id="medico" required>
                 <option value="">Seleccione una Especialidad Requerida</option>
                 {{#each resultado}}
                 <option value="{{Cedula}}">{{Nombres}} {{Apellidos}}</option>
                 {{/each}}
             </select>
-            <br><br>
+            <br>
 
             <input type="submit" value="Enviar" id="Enviar">
         </form>
